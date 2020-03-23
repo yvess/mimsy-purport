@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "mimsy-purport"
+version = "0.1.0"
+description = ""
+authors = ["Yves Serrano <y@yas.ch>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+wagtail = "^2.8"
+wagtail-grapple = {git = "https://github.com/torchbox/wagtail-grapple.git"}
+wagtail-localize = {git = "https://github.com/yvess/wagtail-localize.git", rev = "wagtail-2.8"}
+polib = "^1.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

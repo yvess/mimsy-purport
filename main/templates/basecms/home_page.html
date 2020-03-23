@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block content %}
+<div id="cmscont">
+    {% for block in page.body %}
+        {% if block.block_type == 'heading' %}
+            <h2>{{ block.value }}</h2>
+        {% else %}
+            {% include_block block %}
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
